@@ -1,5 +1,7 @@
 package bot;
 
+import java.util.Scanner;
+
 public class SimpleBot {
 
     private String name;
@@ -22,8 +24,13 @@ public class SimpleBot {
     }
 
     public void meetAndGreet() {
-        System.out.printf("Hello! My name is %s", name);
-        System.out.printf("\nI was created in %d", birthYear);
+        Scanner scn = new Scanner(System.in);
+        System.out.printf("Hello! My name is %s.", name);
+        System.out.printf("\nI was created in %d.", birthYear);
+        System.out.print("\nPlease, remind me your name.");
+
+        System.out.printf("\nWhat a great name you have, %s", scn.nextLine());
+
     }
 
 
@@ -35,3 +42,20 @@ public class SimpleBot {
         bot.meetAndGreet();
     }
 }
+
+
+/*import java.util.Scanner;
+
+public class SimpleBot {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hello! My name is Aid.");
+        System.out.println("I was created in 2018.");
+        System.out.println("Please, remind me your name.");
+
+        // reading a name
+
+        System.out.println("What a great name you have, {yourName}!");
+    }
+}*/
